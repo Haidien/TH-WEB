@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form action="/lienhe/index" method="post">
+    <label>Quý khách đang quan tâm về </label>
+    @Html.DropDownList("QuanTam", new List<SelectListItem>()
+{
+    new SelectListItem() {Text="Chọn chủ đề ",Value="0"},
+    new SelectListItem() {Text="Tư vấn ",Value="1"},
+    new SelectListItem() {Text="Khiếu nại - Phản ánh ",Value="2"},
+    new SelectListItem() {Text="Hợp tác với Thegioididong ",Value="3"},
+    new SelectListItem() {Text="Góp ý cải tiến ",Value="4"},
+})
+    <br />
+
+    <label>Tiêu đề * </label>
+    @Html.TextBox("TieuDe")
+    <br />
+
+    <label>Nội dung * </label>
+    @Html.TextArea("NoiDung")
+    <br />
+
+    <label>Họ và tên * </label>
+    @Html.TextBox("HoTen")
+    <br />
+
+    <label>Địa chỉ email </label>
+    @Html.TextBox("Email")
+    <br />
+
+    <label>Số điện thoại </label>
+    @Html.TextBox("SDT")
+    <br />
+
+    <input type="submit" value="Gửi" />
+</form>
+
